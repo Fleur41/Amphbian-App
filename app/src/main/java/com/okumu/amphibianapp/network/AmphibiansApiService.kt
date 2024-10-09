@@ -1,4 +1,9 @@
 package com.okumu.amphibianapp.network
 
-class AmphibiansApiService {
+import com.okumu.amphibianapp.model.Amphibian
+import retrofit2.http.GET
+
+interface AmphibiansApiService {
+    @GET("amphibians")
+     suspend fun getAmphibians(): List<Amphibian>
 }
